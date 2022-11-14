@@ -1,3 +1,5 @@
+/*CSS custom-properties and intial styling*/
+
 :root {
   --space-cadet: #2d3142;
   --silver: #BFC0C0;
@@ -8,6 +10,8 @@
   font-size: 62.5%;
 }
 
+/*Mobile Basic Layout Styles*/
+
 body{
   background-color: var(--space-cadet);
 }
@@ -15,7 +19,6 @@ body{
 .App {
   font-size: 1.2rem;
 }
-
 
 .desktop-nav {
   display: none;
@@ -78,7 +81,6 @@ body{
   gap: 10px;
   align-items: center;
 }
-
 
 .site-title {
   font-size: 2rem;
@@ -254,8 +256,14 @@ h2 {
   font-size: 2rem;
 }
 
+/*Media query for large screen devices*/
 
 @media screen and (min-width : 1024px){
+
+  .site-title {
+    font-size: 3rem;
+  }
+
   .nav-bar {
     flex-direction: row;
     justify-content: space-between;
@@ -273,14 +281,45 @@ h2 {
     list-style: none;
   }
 
+  .category-name{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
   .list-content {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 2em;
+    justify-content: center;
   }
 
   .item-link {
+    font-size: 1.8rem;
     text-align: center;
-    flex: 1 1 25%;
+    width: 25%;
   }
+
+  .dynamic-component {
+    padding: 2em 1.5em 1em;
+    text-align: center;
+  }
+
+  .dynamic-component h2 {
+    font-size: 4rem;
+  }
+
+  .dynamic-component p {
+    font-size: 2.5rem;
+  }
+
+  .home-page, .fetch-error {
+  padding: 5em 1em 1em;
+   max-width: 500px;
+   align-items: center;
+   margin: 0 auto;
+  
+  }
+ 
+
 }
